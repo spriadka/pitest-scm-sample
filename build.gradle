@@ -35,10 +35,11 @@ dependencies {
 project.group = 'pitest.scm.sample'
 
 scmPitest {
-    scmRoot = '.'
-    goal = 'lastCommit'
+    scmRoot = projectDir
+    goal = 'localChanges'
     scm {
         connection = 'scm:git:git@github.com/spriadka/pitest-scm-sample'
     }
+    includes = ['modified']
     connectionType = 'connection'
 }
